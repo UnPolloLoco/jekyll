@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="{{ '/assets/general/style.css' | absolute_url }}">
-		{% if ex_style %}
+		{% if page.ex_style %}
 			<link rel="stylesheet" href="{{ ex_style | '/assets/' | absolute_url }}">
 		{% endif %}
 	</head>
