@@ -5,13 +5,15 @@
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="{{ '/assets/general/style.css' | absolute_url }}">
 		{% if page.ex_style %}
-			<link rel="stylesheet" href="{{ ex_style | '/assets/' | absolute_url }}">
+			<link rel="stylesheet" href="{{ page.ex_style | '/assets/' | absolute_url }}">
 		{% endif %}
 	</head>
 	<body>
 		<h1>{{ page.title }}</h1>
 		{{ content }}
-		{{ page }}
-		{{ page.ex_style }}
+		<pre>{{ page }}</pre>
+		<pre>{{ page.ex_style }}</pre>
+		<pre>{{ '/assets/general/style.css' | absolute_url }}</pre>
+		<pre>{{ page.ex_style | '/assets/' | absolute_url }}</pre>
 	</body>
 </html>
